@@ -2,38 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/screens/Final.dart';
 import 'package:flutter_app/screens/GruposOuMataMata.dart';
 import 'package:flutter_app/screens/QuartasFinais.dart';
-import 'package:flutter_app/screens/personal_card_screen.dart';
 
-import '../componentes/rounded_button.dart';
-import 'EachGroup.dart';
+import '../models/Team.dart';
+import 'Group.dart';
 
-class SemiFinais extends StatefulWidget {
+class SemiFinais extends StatelessWidget {
   static const String id = 'grupos_choice_screen';
 
-  const SemiFinais({Key? key}) : super(key: key);
+  const SemiFinais({Key? key, required this.teamsMataMata}) : super(key: key);
 
-  @override
-  State<SemiFinais> createState() => _SemiFinaisState();
-}
-
-class _SemiFinaisState extends State<SemiFinais> {
-
-  bool _hasBeenPressedTeam1 = false;
-  bool _hasBeenPressedTeam2 = false;
-  bool _hasBeenPressedTeam3 = false;
-  bool _hasBeenPressedTeam4 = false;
-  bool _hasBeenPressedTeam5 = false;
-  bool _hasBeenPressedTeam6 = false;
-  bool _hasBeenPressedTeam7 = false;
-  bool _hasBeenPressedTeam8 = false;
-  bool _hasBeenPressedTeam9 = false;
-  bool _hasBeenPressedTeam10 = false;
-  bool _hasBeenPressedTeam11 = false;
-  bool _hasBeenPressedTeam12 = false;
-  bool _hasBeenPressedTeam13 = false;
-  bool _hasBeenPressedTeam14 = false;
-  bool _hasBeenPressedTeam15 = false;
-
+  final List<Team> teamsMataMata;
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +22,7 @@ class _SemiFinaisState extends State<SemiFinais> {
             children: <Widget> [
               Column(
               children: [
+                // Botão de Voltar
                 Row(
                   children: [
                     Padding(
@@ -52,12 +31,7 @@ class _SemiFinaisState extends State<SemiFinais> {
                         child: InkWell(
                           onTap: (
                           () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const QuartasFinais()
-                                )
-                            );
+                            Navigator.pop(context);
                           }),
                           child: const Icon(
                             Icons.arrow_back, color: Colors.black54,
@@ -67,6 +41,7 @@ class _SemiFinaisState extends State<SemiFinais> {
                     ),
                   ],
                 ),
+                // Texto Semi Finais
                 Padding(
                   padding: EdgeInsets.only(top: MediaQuery.of(context).size.height / 50),
                   child: Text(style: TextStyle(
@@ -75,6 +50,7 @@ class _SemiFinaisState extends State<SemiFinais> {
                     color: Colors.red[400]
                   ),'Semi Finais'),
                 ),
+                // Primeiro confronto
                 Padding(
                   padding: EdgeInsets.only(top: MediaQuery.of(context).size.height / 30),
                   child: Container(
@@ -103,54 +79,16 @@ class _SemiFinaisState extends State<SemiFinais> {
 
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(top: 10),
+                                padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                     borderRadius: BorderRadius.circular(90),
-                                    child: CircleAvatar(backgroundImage: AssetImage('assets/images/brasil.png')),
+                                    child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[3].flag)),
                                 ),
                               ),
-                              const Padding(
-                                padding: EdgeInsets.only(top: 5),
-                                child: Text('Brasil'),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 5),
+                                child: Text(teamsMataMata[3].name_en),
                               ),
-                              Container(
-                                padding: EdgeInsets.only(top: 20),
-                                height: 60,
-                                width: 100,
-                                color: Colors.transparent,
-                                child: Material(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: _hasBeenPressedTeam1 ? Colors.lightGreenAccent : Colors.white,
-                                  elevation: 5,
-                                  shadowColor: Colors.black,
-                                  child: InkWell(
-                                    onTap: (() {
-                                      setState(() {
-                                        if(_hasBeenPressedTeam1 == false &&  _hasBeenPressedTeam2 == false) {
-                                          _hasBeenPressedTeam1 =
-                                          !_hasBeenPressedTeam1;
-
-                                        } else{
-                                          _hasBeenPressedTeam1 =
-                                          !_hasBeenPressedTeam1;
-                                          _hasBeenPressedTeam2 =
-                                          !_hasBeenPressedTeam2;
-                                        }
-                                      });
-                                    }
-                                    ),
-                                    child: const Center(
-                                      child: Text(style: TextStyle(
-                                          color: Colors.black,
-                                          fontFamily: 'Montserrat'
-                                      ),
-                                          'VENCE'
-                                      ),
-                                    ),
-                                  ),
-
-                                ),
-                              )
                             ],
                           ),
 
@@ -160,50 +98,16 @@ class _SemiFinaisState extends State<SemiFinais> {
                           Column(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(top: 10),
+                                padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                   borderRadius: BorderRadius.circular(90),
-                                  child: CircleAvatar(backgroundImage: AssetImage('assets/images/franca.png'))
+                                  child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[8].flag))
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: const Text('França'),
+                                child: Text(teamsMataMata[8].name_en),
                               ),
-                              Container(
-                                padding: EdgeInsets.only(top: 20),
-                                height: 60,
-                                width: 100,
-                                color: Colors.transparent,
-                                child: Material(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: _hasBeenPressedTeam2 ? Colors.lightGreenAccent : Colors.white,
-                                  elevation: 5,
-                                  shadowColor: Colors.black,
-                                  child: InkWell(
-                                    onTap: (() {
-                                      setState(() {
-                                        if(_hasBeenPressedTeam1 == false &&  _hasBeenPressedTeam2 == false) {
-                                          _hasBeenPressedTeam2 =
-                                          !_hasBeenPressedTeam2;
-
-                                        } else{
-                                          _hasBeenPressedTeam1 = !_hasBeenPressedTeam1;
-                                          _hasBeenPressedTeam2 = !_hasBeenPressedTeam2;
-                                        }
-                                      });
-                                    }),
-                                    child: const Center(
-                                      child: Text(style: TextStyle(
-                                          color: Colors.black,
-                                          fontFamily: 'Montserrat'
-                                      ),
-                                          'VENCE'
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              )
                             ],
                           ),
                         ],
@@ -211,6 +115,7 @@ class _SemiFinaisState extends State<SemiFinais> {
                     ),
             ),
                 ),
+                // Segundo confronto
                 Padding(
                   padding: const EdgeInsets.only(top: 5),
                   child: Container(
@@ -239,54 +144,16 @@ class _SemiFinaisState extends State<SemiFinais> {
 
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(top: 10),
+                                padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                   borderRadius: BorderRadius.circular(90),
-                                  child: CircleAvatar(backgroundImage: AssetImage('assets/images/brasil.png')),
+                                  child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[6].flag)),
                                 ),
                               ),
-                              const Padding(
-                                padding: EdgeInsets.only(top: 5),
-                                child: Text('Brasil'),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 5),
+                                child: Text(teamsMataMata[6].name_en),
                               ),
-                              Container(
-                                padding: EdgeInsets.only(top: 20),
-                                height: 60,
-                                width: 100,
-                                color: Colors.transparent,
-                                child: Material(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: _hasBeenPressedTeam3 ? Colors.lightGreenAccent : Colors.white,
-                                  elevation: 5,
-                                  shadowColor: Colors.black,
-                                  child: InkWell(
-                                    onTap: (() {
-                                      setState(() {
-                                        if(_hasBeenPressedTeam3 == false &&  _hasBeenPressedTeam4 == false) {
-                                          _hasBeenPressedTeam3 =
-                                          !_hasBeenPressedTeam3;
-
-                                        } else{
-                                          _hasBeenPressedTeam3 =
-                                          !_hasBeenPressedTeam3;
-                                          _hasBeenPressedTeam4 =
-                                          !_hasBeenPressedTeam4;
-                                        }
-                                      });
-                                    }
-                                    ),
-                                    child: const Center(
-                                      child: Text(style: TextStyle(
-                                          color: Colors.black,
-                                          fontFamily: 'Montserrat'
-                                      ),
-                                          'VENCE'
-                                      ),
-                                    ),
-                                  ),
-
-                                ),
-                              )
                             ],
                           ),
 
@@ -296,50 +163,16 @@ class _SemiFinaisState extends State<SemiFinais> {
                           Column(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(top: 10),
+                                padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                     borderRadius: BorderRadius.circular(90),
-                                    child: CircleAvatar(backgroundImage: AssetImage('assets/images/franca.png'))
+                                    child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[13].flag))
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: const Text('França'),
+                                child: Text(teamsMataMata[13].name_en),
                               ),
-                              Container(
-                                padding: EdgeInsets.only(top: 20),
-                                height: 60,
-                                width: 100,
-                                color: Colors.transparent,
-                                child: Material(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: _hasBeenPressedTeam4 ? Colors.lightGreenAccent : Colors.white,
-                                  elevation: 5,
-                                  shadowColor: Colors.black,
-                                  child: InkWell(
-                                    onTap: (() {
-                                      setState(() {
-                                        if(_hasBeenPressedTeam3 == false &&  _hasBeenPressedTeam4 == false) {
-                                          _hasBeenPressedTeam4 =
-                                          !_hasBeenPressedTeam4;
-
-                                        } else{
-                                          _hasBeenPressedTeam3 = !_hasBeenPressedTeam3;
-                                          _hasBeenPressedTeam4 = !_hasBeenPressedTeam4;
-                                        }
-                                      });
-                                    }),
-                                    child: const Center(
-                                      child: Text(style: TextStyle(
-                                          color: Colors.black,
-                                          fontFamily: 'Montserrat'
-                                      ),
-                                          'VENCE'
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              )
                             ],
                           ),
                         ],
@@ -347,6 +180,7 @@ class _SemiFinaisState extends State<SemiFinais> {
                     ),
                   ),
                 ),
+                // Botão Proximo
                 Padding(
                   padding: const EdgeInsets.all(30),
                   child: Container(
@@ -359,11 +193,21 @@ class _SemiFinaisState extends State<SemiFinais> {
                       shadowColor: Colors.black,
 
                       child: InkWell(
+                        onTap: (
+                        () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Final(teamsMataMata: teamsMataMata,)
+                              )
+                          );
+                        }
+                        ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.only(right: 30),
+                            const Padding(
+                              padding: EdgeInsets.only(right: 30),
                               child: Text(style: TextStyle(
                                 color: Colors.black, fontFamily: 'Montserrat', fontSize: 32
                               ),
@@ -378,22 +222,10 @@ class _SemiFinaisState extends State<SemiFinais> {
                             )
                           ],
                         ),
-                        onTap: (
-                        () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Final()
-                              )
-                          );
-                        }
-                        ),
                       ),
                     ),
                   ),
                 )
-
-
               ],
             ),
           ]),

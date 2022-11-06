@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/screens/GruposOuMataMata.dart';
-import 'package:flutter_app/screens/personal_card_screen.dart';
-
-import '../componentes/rounded_button.dart';
-import 'EachGroup.dart';
+import '../models/Team.dart';
+import 'Group.dart';
 
 class ChoiceGrupos extends StatelessWidget {
   static const String id = 'grupos_choice_screen';
 
-  const ChoiceGrupos({Key? key}) : super(key: key);
+  const ChoiceGrupos({Key? key, required this.teams}) : super(key: key);
+
+  final List<Team> teams;
 
   @override
   Widget build(BuildContext context) {
@@ -37,13 +37,8 @@ class ChoiceGrupos extends StatelessWidget {
                           color: Colors.transparent,
                           child: InkWell(
                               onTap: (() {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                    builder: (context) => const GruposOuMataMata()
-                                )
-                                );}),
-                              child: Icon(
+                                Navigator.pop(context);}),
+                              child: const Icon(
                                 Icons.arrow_back, color: Colors.white,
                               )
                           )
@@ -72,7 +67,7 @@ class ChoiceGrupos extends StatelessWidget {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const EachGroup()
+                                      builder: (context) => Group(teams: [teams[0], teams[1], teams[2], teams[3]], grupo: 'A')
                                   )
                               );
                               },
@@ -130,6 +125,12 @@ class ChoiceGrupos extends StatelessWidget {
 
                             borderRadius: BorderRadius.all(Radius.elliptical(40, 40)),
                             onTap: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Group(teams: [teams[5], teams[6], teams[7], teams[8]], grupo: 'B')
+                                  )
+                              );
                             },
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -185,6 +186,12 @@ class ChoiceGrupos extends StatelessWidget {
 
                             borderRadius: BorderRadius.all(Radius.elliptical(40, 40)),
                             onTap: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Group(teams: [teams[9], teams[10], teams[11], teams[12]], grupo: 'C')
+                                  )
+                              );
                             },
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -240,6 +247,12 @@ class ChoiceGrupos extends StatelessWidget {
 
                             borderRadius: BorderRadius.all(Radius.elliptical(40, 40)),
                             onTap: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Group(teams: [teams[13], teams[14], teams[15], teams[16]], grupo: 'D')
+                                  )
+                              );
                             },
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -295,6 +308,12 @@ class ChoiceGrupos extends StatelessWidget {
 
                             borderRadius: BorderRadius.all(Radius.elliptical(40, 40)),
                             onTap: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Group(teams: [teams[16], teams[17], teams[18], teams[19]], grupo: 'E')
+                                  )
+                              );
                             },
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -350,6 +369,12 @@ class ChoiceGrupos extends StatelessWidget {
 
                             borderRadius: BorderRadius.all(Radius.elliptical(40, 40)),
                             onTap: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Group(teams: [teams[20], teams[21], teams[22], teams[23]], grupo: 'F')
+                                  )
+                              );
                             },
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -405,6 +430,12 @@ class ChoiceGrupos extends StatelessWidget {
 
                             borderRadius: BorderRadius.all(Radius.elliptical(40, 40)),
                             onTap: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Group(teams: [teams[24], teams[25], teams[26], teams[27]], grupo: 'G')
+                                  )
+                              );
                             },
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -460,6 +491,12 @@ class ChoiceGrupos extends StatelessWidget {
 
                             borderRadius: BorderRadius.all(Radius.elliptical(40, 40)),
                             onTap: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Group(teams: [teams[28], teams[29], teams[30], teams[31]], grupo: 'H')
+                                  )
+                              );
                             },
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,

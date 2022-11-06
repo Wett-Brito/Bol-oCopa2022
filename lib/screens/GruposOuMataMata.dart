@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/screens/ChoiceGrupos.dart';
-import 'package:flutter_app/screens/personal_card_screen.dart';
-
-import '../componentes/rounded_button.dart';
+import '../models/Team.dart';
 import 'OitavasFinais.dart';
 
 class GruposOuMataMata extends StatelessWidget {
   static const String id = 'grupos_choice_screen';
 
-  const GruposOuMataMata({Key? key}) : super(key: key);
+  const GruposOuMataMata({Key? key, required this.teams, required this.teamsMataMata}) : super(key: key);
+
+  final List<Team> teams;
+  final List<Team> teamsMataMata;
+
 
   @override
   Widget build(BuildContext context) {
@@ -17,38 +19,44 @@ class GruposOuMataMata extends StatelessWidget {
       body: SafeArea(
           child: Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [InkWell(
-                child: const Text(style: TextStyle(color: Colors.white), 'FASE DE GRUPOS'),
-                onTap: () {
-                  Navigator.push(
-                      context, 
-                      MaterialPageRoute(builder: ((context) => const ChoiceGrupos())));
-                },
-              ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 60, bottom: 60),
-                  child: Container(
-                    child: FittedBox(
-                      child: Image(
-                          image: const AssetImage("assets/images/line.png")
-                      ),
-                      fit: BoxFit.fill,
-                    ),
+              children: [
+                // Botao superior de fase de grupos
+                Expanded(
+                  flex: 4,
+                  child: InkWell(
+                    child: const Center(child: Text(style: TextStyle(color: Colors.white), 'FASE DE GRUPOS')),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: ((context) => ChoiceGrupos(teams: teams))));
+                    },
                   ),
                 ),
-                InkWell(
-                  child: const Text(style: TextStyle(color: Colors.white), 'MATA-MATA'),
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const OitavasFinais()
-                        )
-                    );
-                  }
-              )],
+                // linha central para separar botoes
+                Expanded(
+                  flex: 1,
+                  child: Divider(
+                    color: Colors.black54,
+
+                  ),
+                ),
+                // Botao inferior de mata mata
+                Expanded(
+                  flex: 4,
+                  child: InkWell(
+                    child: const Center(child: Text(style: TextStyle(color: Colors.white), 'MATA-MATA')),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => OitavasFinais(teamsMataMata: teamsMataMata )
+                          )
+                      );
+                    }
+              ),
+                )],
             ),
           ),
 

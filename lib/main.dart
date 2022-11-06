@@ -1,17 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/quiz/FinishedQuizScreen.dart';
-import 'package:flutter_app/quiz/components/quiz_button.dart';
-import 'package:flutter_app/quiz/quizScreen.dart';
-import 'package:flutter_app/screens/EachGroup.dart';
-import 'package:flutter_app/screens/EachGroup.dart';
-import 'package:flutter_app/screens/Final.dart';
-import 'package:flutter_app/screens/OitavasFinais.dart';
-import 'package:flutter_app/screens/dices.dart';
-import 'package:flutter_app/screens/GruposOuMataMata.dart';
-import 'package:flutter_app/screens/menu_screen.dart';
-import 'package:flutter_app/screens/personal_card_screen.dart';
+import 'package:flutter_app/screens/Inscricao.dart';
 
-void main() {
+
+import 'firebase_options.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -36,12 +34,12 @@ class MyApp extends StatelessWidget {
     // );
 
     return MaterialApp(
-      title: 'Dice Roller',
+      title: 'Consulta Copa',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: GruposOuMataMata(),
+      home: const Inscricao(),
     );
   }
 }

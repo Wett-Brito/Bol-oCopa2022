@@ -1,39 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/screens/GruposOuMataMata.dart';
 import 'package:flutter_app/screens/SemiFinais.dart';
-import 'package:flutter_app/screens/personal_card_screen.dart';
 
-import '../componentes/rounded_button.dart';
-import 'EachGroup.dart';
+import '../models/Team.dart';
+import 'Group.dart';
 
-class Final extends StatefulWidget {
+class Final extends StatelessWidget {
   static const String id = 'grupos_choice_screen';
 
-  const Final({Key? key}) : super(key: key);
+  const Final({Key? key, required this.teamsMataMata}) : super(key: key);
 
-  @override
-  State<Final> createState() => _FinalState();
-}
-
-class _FinalState extends State<Final> {
-
-  bool _hasBeenPressedTeam1 = false;
-  bool _hasBeenPressedTeam2 = false;
-  bool _hasBeenPressedTeam3 = false;
-  bool _hasBeenPressedTeam4 = false;
-  bool _hasBeenPressedTeam5 = false;
-  bool _hasBeenPressedTeam6 = false;
-  bool _hasBeenPressedTeam7 = false;
-  bool _hasBeenPressedTeam8 = false;
-  bool _hasBeenPressedTeam9 = false;
-  bool _hasBeenPressedTeam10 = false;
-  bool _hasBeenPressedTeam11 = false;
-  bool _hasBeenPressedTeam12 = false;
-  bool _hasBeenPressedTeam13 = false;
-  bool _hasBeenPressedTeam14 = false;
-  bool _hasBeenPressedTeam15 = false;
-
-
+  final List<Team> teamsMataMata;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,6 +20,7 @@ class _FinalState extends State<Final> {
             children: <Widget> [
               Column(
               children: [
+                // Botão voltar
                 Row(
                   children: [
                     Padding(
@@ -51,12 +29,7 @@ class _FinalState extends State<Final> {
                         child: InkWell(
                           onTap: (
                           () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const SemiFinais()
-                                )
-                            );
+                            Navigator.pop(context);
                           }),
                           child: const Icon(
                             Icons.arrow_back, color: Colors.black54,
@@ -66,6 +39,7 @@ class _FinalState extends State<Final> {
                     ),
                   ],
                 ),
+                // Texto Final
                 Padding(
                   padding: EdgeInsets.only(top: MediaQuery.of(context).size.height / 50),
                   child: Text(style: TextStyle(
@@ -74,13 +48,14 @@ class _FinalState extends State<Final> {
                     color: Colors.red[400]
                   ),'Final'),
                 ),
+                // Unico Confronto
                 Padding(
                   padding: EdgeInsets.only(top: MediaQuery.of(context).size.height / 30),
                   child: Container(
                       width: MediaQuery.of(context).size.width / 1.2,
                       height: MediaQuery.of(context).size.height / 5,
-                      margin: EdgeInsets.all(10),
-                      padding: EdgeInsets.all(5),
+                      margin: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(5),
 
                       decoration: BoxDecoration(
                         border: Border.all(
@@ -88,7 +63,7 @@ class _FinalState extends State<Final> {
                           width: 1,
 
                       ),
-                        borderRadius: BorderRadius.all(
+                        borderRadius: const BorderRadius.all(
                             Radius.circular(10)
                         )
                       ),
@@ -102,54 +77,16 @@ class _FinalState extends State<Final> {
 
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(top: 10),
+                                padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                     borderRadius: BorderRadius.circular(90),
-                                    child: CircleAvatar(backgroundImage: AssetImage('assets/images/brasil.png')),
+                                    child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[4].flag)),
                                 ),
                               ),
-                              const Padding(
-                                padding: EdgeInsets.only(top: 5),
-                                child: Text('Brasil'),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 5),
+                                child: Text(teamsMataMata[4].name_en),
                               ),
-                              Container(
-                                padding: EdgeInsets.only(top: 20),
-                                height: 60,
-                                width: 100,
-                                color: Colors.transparent,
-                                child: Material(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: _hasBeenPressedTeam1 ? Colors.lightGreenAccent : Colors.white,
-                                  elevation: 5,
-                                  shadowColor: Colors.black,
-                                  child: InkWell(
-                                    onTap: (() {
-                                      setState(() {
-                                        if(_hasBeenPressedTeam1 == false &&  _hasBeenPressedTeam2 == false) {
-                                          _hasBeenPressedTeam1 =
-                                          !_hasBeenPressedTeam1;
-
-                                        } else{
-                                          _hasBeenPressedTeam1 =
-                                          !_hasBeenPressedTeam1;
-                                          _hasBeenPressedTeam2 =
-                                          !_hasBeenPressedTeam2;
-                                        }
-                                      });
-                                    }
-                                    ),
-                                    child: const Center(
-                                      child: Text(style: TextStyle(
-                                          color: Colors.black,
-                                          fontFamily: 'Montserrat'
-                                      ),
-                                          'VENCE'
-                                      ),
-                                    ),
-                                  ),
-
-                                ),
-                              )
                             ],
                           ),
 
@@ -159,50 +96,16 @@ class _FinalState extends State<Final> {
                           Column(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(top: 10),
+                                padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                   borderRadius: BorderRadius.circular(90),
-                                  child: CircleAvatar(backgroundImage: AssetImage('assets/images/franca.png'))
+                                  child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[13].flag))
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: const Text('França'),
+                                child: Text(teamsMataMata[13].name_en),
                               ),
-                              Container(
-                                padding: EdgeInsets.only(top: 20),
-                                height: 60,
-                                width: 100,
-                                color: Colors.transparent,
-                                child: Material(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: _hasBeenPressedTeam2 ? Colors.lightGreenAccent : Colors.white,
-                                  elevation: 5,
-                                  shadowColor: Colors.black,
-                                  child: InkWell(
-                                    onTap: (() {
-                                      setState(() {
-                                        if(_hasBeenPressedTeam1 == false &&  _hasBeenPressedTeam2 == false) {
-                                          _hasBeenPressedTeam2 =
-                                          !_hasBeenPressedTeam2;
-
-                                        } else{
-                                          _hasBeenPressedTeam1 = !_hasBeenPressedTeam1;
-                                          _hasBeenPressedTeam2 = !_hasBeenPressedTeam2;
-                                        }
-                                      });
-                                    }),
-                                    child: const Center(
-                                      child: Text(style: TextStyle(
-                                          color: Colors.black,
-                                          fontFamily: 'Montserrat'
-                                      ),
-                                          'VENCE'
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              )
                             ],
                           ),
                         ],
@@ -210,34 +113,6 @@ class _FinalState extends State<Final> {
                     ),
             ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(30),
-                  child: Container(
-                    color: Colors.transparent,
-                    height: 50,
-                    width: 250,
-                    child: Material(
-                      borderRadius: BorderRadius.circular(30),
-                      elevation: 20,
-                      shadowColor: Colors.black,
-                      color: Colors.teal,
-                      child: InkWell(
-                        child: Center(
-                          child: Text(style: TextStyle(
-                            color: Colors.white, fontFamily: 'Montserrat', fontSize: 32
-                          ),
-                            'Salvar'
-                          ),
-                        ),
-                        onTap: (
-                        () {
-
-                        }
-                        ),
-                      ),
-                    ),
-                  ),
-                )
               ],
             ),
           ]),
