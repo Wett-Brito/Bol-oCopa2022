@@ -19,6 +19,9 @@ Para instalar o ConsultaCopa2022, siga estas etapas:
 
 Rodando via App:
 
+Se vc preferir executar sem ter que criar um usuario, deixamos disponivel o usuario: teste@teste.com, senha: 123456789
+
+
 Apenas clone este repositorio para a sua maquina e execute pelo android studio selecionando um celular disponivel
 ```
 Esse projeto foi desenvolvido usando como base o Pixel 6 
@@ -36,9 +39,9 @@ precisa primeiro desabilitar uma configuração de segurança do Chrome
 usando não ter o CORS corretamente configurado
 ```
 
-## ☕ Usando <nome_do_projeto>
+## ☕ Usando ConsultaCopa2022
 
-Para usar <nome_do_projeto>, siga estas etapas:
+Para usar ConsultaCopa2022, siga estas etapas:
 
 ```
 <exemplo_de_uso>
@@ -52,7 +55,7 @@ Para contribuir com ConsultaCopa2022, siga estas etapas:
 1. Bifurque este repositório.
 2. Crie um branch: `git checkout -b <nome_branch>`.
 3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
-4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
+4. Envie para o branch original: `git push origin ConsultaCopa2022`
 5. Crie a solicitação de pull.
 
 Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
