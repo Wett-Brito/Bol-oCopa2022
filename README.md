@@ -67,7 +67,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       <a href="#">
         <img src="https://avatars.githubusercontent.com/u/39777075?v=4" width="100px;" alt="Foto do Wellington Brito no GitHub"/><br>
         <sub>
-          <b>Iuri Silva</b>
+          <b>Wellington Brito</b>
         </sub>
       </a>
     </td>
