@@ -11,7 +11,7 @@ import 'package:firebase_database/firebase_database.dart';
 
 import '../models/Team.dart';
 import 'GruposOuMataMata.dart';
-import 'Inscricao.dart';
+import 'Login.dart';
 import 'OitavasFinais.dart';
 import 'UsuarioCriado.dart';
 
@@ -170,7 +170,7 @@ class _CriarContaState extends State<CriarConta> {
                       onPressed: () {
                         Navigator.push(
                             context,
-                            MaterialPageRoute(builder: ((context) => const Inscricao())));
+                            MaterialPageRoute(builder: ((context) => const Login())));
                       },
                       icon: const Icon(
                         Icons.arrow_back

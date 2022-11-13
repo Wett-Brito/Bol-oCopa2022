@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Inscricao.dart';
+import 'Login.dart';
 
 class UsuarioCriado extends StatelessWidget {
   static const String id = 'grupos_choice_screen';
@@ -24,7 +24,7 @@ class UsuarioCriado extends StatelessWidget {
                     Navigator.pushReplacement<void, void>(
                       context,
                       MaterialPageRoute<void>(
-                        builder: (BuildContext context) => const Inscricao(),
+                        builder: (BuildContext context) => const Login(),
                       ),
                     );
                   },
