@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/Final.dart';
-import 'package:flutter_app/screens/GruposOuMataMata.dart';
-import 'package:flutter_app/screens/QuartasFinais.dart';
 
 import '../models/Team.dart';
+import 'Final.dart';
 import 'Group.dart';
 
 class SemiFinais extends StatelessWidget {
@@ -15,6 +13,9 @@ class SemiFinais extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    Team timePadrao = Team(team_id: '0', name_en: 'Sem Definição', flag: 'https://img.freepik.com/vetores-premium/copa-do-mundo-fifa-qatar-2022-logo-estilizado-vector-ilustracao-isolada-com-futebol_633888-126.jpg?w=2000', pts: '0');
+
     return Scaffold(
       body: SafeArea(
         child: Center(
@@ -82,12 +83,12 @@ class SemiFinais extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                     borderRadius: BorderRadius.circular(90),
-                                    child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[3].flag)),
+                                    child: CircleAvatar(backgroundImage: NetworkImage(timePadrao.flag)),
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: Text(teamsMataMata[3].name_en),
+                                child: Text(timePadrao.name_en),
                               ),
                             ],
                           ),
@@ -101,12 +102,12 @@ class SemiFinais extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                   borderRadius: BorderRadius.circular(90),
-                                  child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[8].flag))
+                                  child: CircleAvatar(backgroundImage: NetworkImage(timePadrao.flag))
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: Text(teamsMataMata[8].name_en),
+                                child: Text(timePadrao.name_en),
                               ),
                             ],
                           ),
@@ -147,12 +148,12 @@ class SemiFinais extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                   borderRadius: BorderRadius.circular(90),
-                                  child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[6].flag)),
+                                  child: CircleAvatar(backgroundImage: NetworkImage(timePadrao.flag)),
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: Text(teamsMataMata[6].name_en),
+                                child: Text(timePadrao.name_en),
                               ),
                             ],
                           ),
@@ -166,12 +167,12 @@ class SemiFinais extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                     borderRadius: BorderRadius.circular(90),
-                                    child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[13].flag))
+                                    child: CircleAvatar(backgroundImage: NetworkImage(timePadrao.flag))
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: Text(teamsMataMata[13].name_en),
+                                child: Text(timePadrao.name_en),
                               ),
                             ],
                           ),

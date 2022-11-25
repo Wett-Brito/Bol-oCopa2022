@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Dev\\Workspaces\\Mobile\\Mobile-Flutter-main\\Mobile-Flutter-main\\build\\firebase_core\\intermediates\\merged_res\\release\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\Wett\\.gradle\\caches\\transforms-3\\c3095be35184fc7f59e80866aea884b7\\transformed\\core-1.6.0\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "C:\\Dev\\Workspaces\\Mobile\\Mobile-Flutter-main\\Mobile-Flutter-main\\build\\firebase_core\\intermediates\\merged_res\\release\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\Wett\\.gradle\\caches\\transforms-3\\c3095be35184fc7f59e80866aea884b7\\transformed\\core-1.6.0\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "C:\\Dev\\Workspaces\\Mobile\\Mobile-Flutter-main\\Mobile-Flutter-main\\build\\firebase_core\\intermediates\\merged_res\\release\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\Wett\\.gradle\\caches\\transforms-3\\c3095be35184fc7f59e80866aea884b7\\transformed\\core-1.6.0\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "C:\\Dev\\Workspaces\\Mobile\\Mobile-Flutter-main\\Mobile-Flutter-main\\build\\firebase_core\\intermediates\\merged_res\\release\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\Wett\\.gradle\\caches\\transforms-3\\c3095be35184fc7f59e80866aea884b7\\transformed\\core-1.6.0\\res\\drawable\\notification_icon_background.xml"
+    }
+]

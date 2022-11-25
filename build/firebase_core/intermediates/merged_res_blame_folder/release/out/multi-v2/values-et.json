@@ -1,0 +1,82 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Dev\\Workspaces\\Mobile\\Mobile-Flutter-main\\Mobile-Flutter-main\\build\\firebase_core\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-et\\values-et.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Wett\\.gradle\\caches\\transforms-3\\c3095be35184fc7f59e80866aea884b7\\transformed\\core-1.6.0\\res\\values-et\\values-et.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "195",
+                        "endColumns": "100",
+                        "endOffsets": "291"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Wett\\.gradle\\caches\\transforms-3\\4daeb08688b1377b11b567dceb26f491\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-et\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "135",
+                        "endOffsets": "330"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "139",
+                        "endOffsets": "190"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Dev\\Workspaces\\Mobile\\Mobile-Flutter-main\\Mobile-Flutter-main\\build\\firebase_core\\intermediates\\merged_res\\release\\values-et\\values-et.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Wett\\.gradle\\caches\\transforms-3\\c3095be35184fc7f59e80866aea884b7\\transformed\\core-1.6.0\\res\\values-et\\values-et.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "195",
+                        "endColumns": "100",
+                        "endOffsets": "291"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Wett\\.gradle\\caches\\transforms-3\\4daeb08688b1377b11b567dceb26f491\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-et\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "135",
+                        "endOffsets": "330"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "139",
+                        "endOffsets": "190"
+                    }
+                }
+            ]
+        }
+    ]
+}

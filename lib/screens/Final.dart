@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/GruposOuMataMata.dart';
-import 'package:flutter_app/screens/SemiFinais.dart';
 
 import '../models/Team.dart';
 import 'Group.dart';
@@ -13,6 +11,9 @@ class Final extends StatelessWidget {
   final List<Team> teamsMataMata;
   @override
   Widget build(BuildContext context) {
+
+    Team timePadrao = Team(team_id: '0', name_en: 'Sem Definição', flag: 'https://img.freepik.com/vetores-premium/copa-do-mundo-fifa-qatar-2022-logo-estilizado-vector-ilustracao-isolada-com-futebol_633888-126.jpg?w=2000', pts: '0');
+
     return Scaffold(
       body: SafeArea(
         child: Center(
@@ -80,12 +81,12 @@ class Final extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                     borderRadius: BorderRadius.circular(90),
-                                    child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[4].flag)),
+                                    child: CircleAvatar(backgroundImage: NetworkImage(timePadrao.flag)),
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: Text(teamsMataMata[4].name_en),
+                                child: Text(timePadrao.name_en),
                               ),
                             ],
                           ),
@@ -99,12 +100,12 @@ class Final extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                   borderRadius: BorderRadius.circular(90),
-                                  child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[13].flag))
+                                  child: CircleAvatar(backgroundImage: NetworkImage(timePadrao.flag))
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: Text(teamsMataMata[13].name_en),
+                                child: Text(timePadrao.name_en),
                               ),
                             ],
                           ),

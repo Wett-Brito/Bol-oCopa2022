@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/GruposOuMataMata.dart';
-import 'package:flutter_app/screens/OitavasFinais.dart';
-import 'package:flutter_app/screens/SemiFinais.dart';
 
 import '../models/Team.dart';
 import 'Group.dart';
+import 'SemiFinais.dart';
 
 class QuartasFinais extends StatelessWidget {
   static const String id = 'grupos_choice_screen';
@@ -13,8 +11,12 @@ class QuartasFinais extends StatelessWidget {
 
   final List<Team> teamsMataMata;
 
+
   @override
   Widget build(BuildContext context) {
+
+    Team timePadrao = Team(team_id: '0', name_en: 'Sem Definição', flag: 'https://img.freepik.com/vetores-premium/copa-do-mundo-fifa-qatar-2022-logo-estilizado-vector-ilustracao-isolada-com-futebol_633888-126.jpg?w=2000', pts: '0');
+
     return Scaffold(
       body: SafeArea(
         child: Center(
@@ -76,22 +78,20 @@ class QuartasFinais extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Column(
-
                             children: [
                               Padding(
                                 padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                     borderRadius: BorderRadius.circular(90),
-                                    child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[5].flag)),
+                                    child: CircleAvatar(backgroundImage: NetworkImage(timePadrao.flag)),
                                 ),
                               ),
                               Padding(
                                 padding: EdgeInsets.only(top: 5),
-                                child: Text(teamsMataMata[5].name_en),
+                                child: Text(timePadrao.name_en),
                               ),
                             ],
                           ),
-
                           Text(style: TextStyle(
                             fontSize: 64, color: Colors.red[400],
                           ),'X'),
@@ -101,12 +101,12 @@ class QuartasFinais extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                   borderRadius: BorderRadius.circular(90),
-                                  child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[11].flag))
+                                  child: CircleAvatar(backgroundImage: NetworkImage(timePadrao.flag))
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: Text(teamsMataMata[11].name_en),
+                                child: Text(timePadrao.name_en),
                               ),
                             ],
                           ),
@@ -147,12 +147,12 @@ class QuartasFinais extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                   borderRadius: BorderRadius.circular(90),
-                                  child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[2].flag)),
+                                  child: CircleAvatar(backgroundImage: NetworkImage(timePadrao.flag)),
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: Text(teamsMataMata[2].name_en),
+                                child: Text(timePadrao.name_en),
                               ),
                             ],
                           ),
@@ -166,12 +166,12 @@ class QuartasFinais extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                     borderRadius: BorderRadius.circular(90),
-                                    child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[13].flag))
+                                    child: CircleAvatar(backgroundImage: NetworkImage(timePadrao.flag))
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: Text(teamsMataMata[13].name_en),
+                                child: Text(timePadrao.name_en),
                               ),
                             ],
                           ),
@@ -212,12 +212,12 @@ class QuartasFinais extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                   borderRadius: BorderRadius.circular(90),
-                                  child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[1].flag)),
+                                  child: CircleAvatar(backgroundImage: NetworkImage(timePadrao.flag)),
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: Text(teamsMataMata[1].name_en),
+                                child: Text(timePadrao.name_en),
                               ),
                             ],
                           ),
@@ -231,12 +231,12 @@ class QuartasFinais extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                     borderRadius: BorderRadius.circular(90),
-                                    child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[9].flag))
+                                    child: CircleAvatar(backgroundImage: NetworkImage(timePadrao.flag))
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: Text(teamsMataMata[9].name_en),
+                                child: Text(timePadrao.name_en),
                               ),
                             ],
                           ),
@@ -277,12 +277,12 @@ class QuartasFinais extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                   borderRadius: BorderRadius.circular(90),
-                                  child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[4].flag)),
+                                  child: CircleAvatar(backgroundImage: NetworkImage(timePadrao.flag)),
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: Text(teamsMataMata[4].name_en),
+                                child: Text(timePadrao.name_en),
                               ),
                             ],
                           ),
@@ -296,12 +296,12 @@ class QuartasFinais extends StatelessWidget {
                                 padding: const EdgeInsets.only(top: 40),
                                 child: Material(
                                     borderRadius: BorderRadius.circular(90),
-                                    child: CircleAvatar(backgroundImage: NetworkImage(teamsMataMata[15].flag))
+                                    child: CircleAvatar(backgroundImage: NetworkImage(timePadrao.flag))
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(top: 5),
-                                child: Text(teamsMataMata[15].name_en),
+                                child: Text(timePadrao.name_en),
                               ),
                             ],
                           ),

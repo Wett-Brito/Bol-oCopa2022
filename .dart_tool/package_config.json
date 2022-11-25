@@ -260,13 +260,13 @@
       "languageVersion": "2.14"
     },
     {
-      "name": "flutter_app",
+      "name": "ConsultaCopa2022",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-11-06T21:33:45.929096Z",
+  "generated": "2022-11-15T08:22:34.702391Z",
   "generator": "pub",
   "generatorVersion": "2.18.2"
 }

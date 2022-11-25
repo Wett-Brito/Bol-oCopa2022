@@ -1,0 +1,4 @@
+#Tue Nov 15 05:33:00 BRT 2022
+base.0=C\:\\Dev\\Workspaces\\Mobile\\Mobile-Flutter-main\\Mobile-Flutter-main\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

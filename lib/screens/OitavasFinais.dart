@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/GruposOuMataMata.dart';
-
 import '../models/Team.dart';
 import 'Group.dart';
 import 'QuartasFinais.dart';

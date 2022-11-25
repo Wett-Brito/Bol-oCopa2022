@@ -1,10 +1,10 @@
 import 'dart:async';
 
+import 'package:ConsultaCopa2022/screens/GruposOuMataMata.dart';
+import 'package:ConsultaCopa2022/screens/Login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/GruposOuMataMata.dart';
-import 'package:flutter_app/screens/Login.dart';
 
 
 import 'firebase_options.dart';
